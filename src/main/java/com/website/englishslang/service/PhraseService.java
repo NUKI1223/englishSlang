@@ -8,10 +8,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
-public class phraseService {
+public class PhraseService {
 
     private Map<String, String> dictionary;
-    public phraseService(){
+    public PhraseService(){
         dictionary = new HashMap<>();
         loadPhrases();
     }
@@ -25,4 +25,8 @@ public class phraseService {
         }
     }
 
+    public String getDefiniton(String word){
+        String definition = dictionary.get(word);
+        return definition;
+    }
 }
