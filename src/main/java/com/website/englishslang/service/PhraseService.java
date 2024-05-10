@@ -1,6 +1,7 @@
 package com.website.englishslang.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.Data;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -8,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
+@Data
 public class PhraseService {
 
     private Map<String, String> dictionary;
@@ -28,5 +30,11 @@ public class PhraseService {
     public String getDefiniton(String word){
         String definition = dictionary.get(word);
         return definition;
+    }
+
+    @Override
+    public String toString() {
+
+        return dictionary.toString();
     }
 }
