@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Результаты поиска - Phrase App</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1>Результаты поиска</h1>
+<p style="margin-left: 25px" th:if="${#lists.isEmpty(results)}">Нет результатов поиска</p>
+<b><p style="margin-left: 25px; font-size: 46px" th:text="${word}"></p></b>
+<p style="margin-left: 25px" th:text="${results}"></p>
+<button style="margin-left: 25px" type="submit" onclick="history.back()">Назад к поиску</button>
+</body>
+</html>

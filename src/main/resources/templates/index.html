@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Phrase App</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1>Phrase App</h1>
+<form action="/search" method="get">
+    <input type="text" name="query" placeholder="Поиск фраз...">
+    <button type="submit">Искать</button>
+</form>
+<h2 >Все возможные слова:</h2>
+<ul>
+    <li  th:each="word : ${words}">
+        <a th:href="@{/phrase/{word}(word=${word})}">
+            <span th:text="${word}"></span>
+        </a>
+    </li>
+<!--    <li  th:each="definition : ${definitions}">-->
+<!--    <a th:href="@{/phrase/{definition}(word=${definition})}">-->
+<!--        <span th:text="${definition}"></span>-->
+<!--    </a>-->
+<!--    </li>-->
+</ul>
+</body>
+</html>

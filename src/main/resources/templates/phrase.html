@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Определение слова - Phrase App</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body>
+<b><h1>Определение слова "<span style="font-size: 46px" th:text="${word}"></span>"</h1></b>
+<p style="margin-left: 25px" th:text="${definition}"></p>
+<button style="margin-left: 25px" type="submit" onclick="history.back()">Назад к поиску</button>
+
+
+</body>
+</html>
